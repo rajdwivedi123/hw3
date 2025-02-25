@@ -1,0 +1,22 @@
+<h1><%= @place.name %></h1>
+
+<h2>Journal Entries</h2>
+<% if @place.entries.empty? %>
+  <p>No journal entries yet for this place.</p>
+<% else %>
+  <ul>
+    <% for entry in @place.entries %>
+      <li>
+        <strong><%= entry.title %></strong>: <%= entry.description %>
+        (Posted on: <%= entry.posted_on %>)
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>
+  <a href="/places">Back to Places</a>
+</p>
+<p>
+  <a href="/places/<%= @place.id %>/entries/new">Add a New Entry</a>
+</p>
