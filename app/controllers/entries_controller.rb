@@ -12,7 +12,7 @@ class EntriesController < ApplicationController
     @entry = @place.entries.new(entry_params)
     if @entry.save
       # Redirect to the place’s show page after saving.
-      redirect_to place_path(@place)
+      redirect_to("/places/#{@place.id}")
     else
       render :new
     end
