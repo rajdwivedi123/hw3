@@ -1,7 +1,6 @@
 <h1>Add a New Entry for <%= @place.name %></h1>
 
 <form action="/places/<%= @place.id %>/entries" method="post">
-  <!-- Make sure your main layout (application.html.erb) includes <%= csrf_meta_tags %> -->
 
   <p>
     <label for="entry_title">Title:</label>
