@@ -7,6 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-Place.create(name: "Chicago")
-Place.create(name: "Paris")
-Place.create(name: "Tokyo")
+
+
+bali = Place.create(name: "bali")
+sydney = Place.create(name: "sydney")
+
+bali.entries.create(title: "Visiting the monkey island", description: "Lots of chimps", posted_on: "2024-03-01")
+sydney.entries.create(title: "From Sydney, with love", description: "Good beer", posted_on: "2022-01-24")
+
